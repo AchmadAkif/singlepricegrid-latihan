@@ -1,0 +1,130 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    height: 100%;
+    background-color: hsl(204, 43%, 93%);
+}
+
+.container {
+    margin: 50px 20px;
+    display: grid;
+    grid-template-areas: 
+                        'Join'
+                        'Sign'
+                        'Why';
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.18);;
+}
+
+/* DESKTOP VERSION */
+@media only screen and (min-width: 768px) {
+    body {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .container {
+        margin: 50px 23%;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas: 
+                            'Join Empty'
+                            'Sign Why';
+    }    
+}
+
+/* EACH CARD */
+.item {
+    padding: 30px 25px;
+}
+
+.Join {
+    grid-area: Join;
+    grid-column: 1 / span 2;
+    background-color: white;
+}
+
+.Sign {
+    grid-area: Sign;
+    background-color:  hsl(179, 62%, 43%);
+}
+
+.Why {
+    grid-area: Why;
+    background-color:  hsl(179, 61%, 67%);
+}
+
+
+
+/* TYPHOGRAPHY */
+h3,
+p {
+    text-shadow: 0px 2px 20px rgba(0,0,0,0.26);
+}
+
+.heading {
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 22px;
+}
+.Join .heading {
+    color:  hsl(179, 62%, 43%);
+}
+.Sign .heading, 
+.Why .heading {
+    color: white;
+}
+
+.sub-heading {
+    margin-bottom: 25px;
+}
+.Join .sub-heading {
+    color: hsl(71, 73%, 54%);
+}
+.Sign .sub-heading {
+    color: hsl(204, 43%, 93%);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.Sign .sub-heading span {
+    font-size: 38px;
+    color: white;
+    font-weight: bold;
+}
+
+.Sign .button {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: hsl(71, 73%, 54%);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 9px 16px 50px 9px rgba(0,0,0,0.27); 
+    box-shadow: 9px 16px 50px 9px rgba(0,0,0,0.27);
+}
+.Sign .button p {
+    color: white;
+}
+
+
+
+.paragraph {
+    color: white;
+    line-height: 150%;
+    font-weight: 200;
+}
+.Join .paragraph {
+    color: hsl(218, 22%, 67%);
+}
+
+a {
+    text-decoration: none;
+}
